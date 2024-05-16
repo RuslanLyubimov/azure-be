@@ -1,14 +1,12 @@
 {
   "bindings": [
     {
-      "authLevel": "function",
+      "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": [
-        "get",
-        "post"
-      ]
+      "route": "products/{id}",
+      "methods": ["get"]
     },
     {
       "type": "http",
@@ -16,5 +14,5 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/http-get-products/index.js"
+  "scriptFile": "../dist/http-get-product-by-id/index.js"
 }

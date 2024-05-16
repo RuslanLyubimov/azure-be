@@ -7,13 +7,16 @@
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "func start",
+    "swap": "az functionapp deployment slot swap --name fa-products-service-ne-104 --resource-group rg-product-service-sand-ne-101 --slot staging",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "@azure/app-configuration": "^1.5.0"
+  },
   "devDependencies": {
     "@azure/functions": "^3.0.0",
-    "azure-functions-core-tools": "^4.x",
     "@types/node": "18.x",
+    "azure-functions-core-tools": "^4.x",
     "typescript": "^4.0.0"
   }
 }
