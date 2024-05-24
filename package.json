@@ -6,17 +6,22 @@
     "build": "tsc",
     "watch": "tsc -w",
     "prestart": "npm run build",
+    "publish": "func azure functionapp publish fa-products-service-ne-104",
     "start": "func start",
+    "db": "node model/lunchDb.ts",
     "swap": "az functionapp deployment slot swap --name fa-products-service-ne-104 --resource-group rg-product-service-sand-ne-101 --slot staging",
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "@azure/app-configuration": "^1.5.0"
+    "@azure/app-configuration": "^1.5.0",
+    "@azure/cosmos": "^4.0.0"
   },
   "devDependencies": {
     "@azure/functions": "^3.0.0",
+    "@faker-js/faker": "^8.4.1",
     "@types/node": "18.x",
     "azure-functions-core-tools": "^4.x",
+    "dotenv": "^16.4.5",
     "typescript": "^4.0.0"
   }
 }
